@@ -124,7 +124,7 @@
     <value>{0} já votou!</value>
   </data>
   <data name="MsgRestauranteEmpatado" xml:space="preserve">
-    <value>Os seguintes restaurantes estão empatados: {0} a votação será reiniciada!</value>
+    <value>Os seguintes restaurantes estão empatados: {0} a votação deverá ser reiniciada!</value>
   </data>
   <data name="MsgRestauranteEscolhido" xml:space="preserve">
     <value>Restaurante escolhido: {0}, com {1} votos</value>
