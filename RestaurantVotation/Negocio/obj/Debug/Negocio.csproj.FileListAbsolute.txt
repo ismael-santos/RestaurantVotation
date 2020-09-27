@@ -1,0 +1,15 @@
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\bin\Debug\Negocio.dll
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\bin\Debug\Aplicacao.dll
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\bin\Debug\Dominio.dll
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\bin\Debug\Repositorio.dll
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\bin\Debug\Aplicacao.pdb
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\bin\Debug\Repositorio.pdb
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\obj\Debug\Negocio.dll
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\obj\Debug\Negocio.Properties.Resource.resources
+C:\Users\Ismael Santos\Desktop\Provas\DesafioDBServer\VotacaoRestaurante\Negocio\obj\Debug\Negocio.csproj.GenerateResource.cache

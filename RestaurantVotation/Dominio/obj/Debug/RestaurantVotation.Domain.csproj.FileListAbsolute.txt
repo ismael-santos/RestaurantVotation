@@ -1,0 +1,6 @@
+C:\Users\Ismael Santos\Desktop\Nova pasta\Nova pasta\DesafioDBServer\VotacaoRestaurante\Dominio\bin\Debug\Dominio.dll
+C:\Users\Ismael Santos\Desktop\Nova pasta\Nova pasta\DesafioDBServer\VotacaoRestaurante\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Ismael Santos\Desktop\Nova pasta\Nova pasta\DesafioDBServer\VotacaoRestaurante\Dominio\obj\Debug\RestaurantVotation.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ismael Santos\Desktop\Nova pasta\Nova pasta\DesafioDBServer\VotacaoRestaurante\Dominio\obj\Debug\Dominio.dll
+C:\Users\Ismael Santos\Desktop\Nova pasta\Nova pasta\DesafioDBServer\VotacaoRestaurante\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Ismael Santos\Desktop\Nova pasta\Nova pasta\DesafioDBServer\VotacaoRestaurante\Dominio\obj\Debug\RestaurantVotation.Domain.csprojAssemblyReference.cache

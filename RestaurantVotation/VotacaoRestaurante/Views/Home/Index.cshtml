@@ -1,0 +1,159 @@
+﻿@model RestaurantVotation.Domain.Model.VotingDTO
+
+@{
+    ViewBag.Title = "Votação Restaurante";
+}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Vote</h2>
+            <p>Escolha o restaurante do dia.</p>
+        </div><div class="col-md-4"></div>
+        <div class="col-md-4">
+            @{
+                var vencedorSemana = TempData["VencedorSemana"] as List<RestaurantVotation.Domain.Model.VotingDTO> ?? new List<RestaurantVotation.Domain.Model.VotingDTO>();
+                if (vencedorSemana.Any())
+                {
+                    <h3 style="color: green;">Escolhidos da semana</h3>
+                    <table id="t01" style="color: green;">
+                        <thead>
+                        <th>Dia</th>
+                        <th></th>
+                        <th>Restaurante</th>
+                        </thead>
+                        @foreach (var item in vencedorSemana)
+                        {
+                            <tr>
+                                <td>
+                                    @item.DateVoting.ToString("dd/MM/yyyy")
+                                </td>
+                                <td>--------</td>
+                                <td>
+                                    @item.Restaurant.RestaurantName
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm("Votar", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <label class="control-label">Data Votação</label>
+    if (TempData["Date"] == null)
+    {
+        @Html.TextBoxFor(m => m.DateVoting, "{0:dd/MM/yyyy}", new { type = "date", @required = "required", @class = "form-control" })
+    }
+    else
+    {
+        @Html.TextBoxFor(m => m.DateVoting, "{0:dd/MM/yyyy}", new { @required = "required", @class = "form-control", @Value = TempData["Date"], @readonly = "@readonly" })
+    }
+
+    <div class="row">
+        <div class="col-md-4">
+            <p><label class="control-label">Colaborador</label></p>
+            <p>@Html.DropDownListFor(m => m.Staff.Id, ViewBag.Colaborador as IEnumerable<SelectListItem>, string.Empty, new { @required = "required", @class = "form-control" })</p>
+        </div>
+        <div class="col-md-4">
+            <p><label class="control-label">Restaurante</label></p>
+            <p>@Html.DropDownListFor(m => m.Restaurant.Id, ViewBag.Restaurante as IEnumerable<SelectListItem>, string.Empty, new { @required = "required", @class = "form-control" })</p>
+        </div>
+
+        <b><p>Finalize ou reinicie a votação</p></b>
+        <div class="col-md-2">
+            <input type="button" class="btn btn-success" value="Finalizar" onclick="location.href='@Url.Action("Finalizar", "Home")'" />
+            <input type="button" class="btn btn-warning" value="Reiniciar" onclick="location.href='@Url.Action("Reiniciar", "Home")'" />
+        </div>
+    </div>
+
+    <div class="row">
+        <h2 class="col-md-8">
+            @{ if (TempData["Error"] != null)
+                {
+                    <p class="alert-danger">@TempData["Error"]</p>
+                }
+
+                if (TempData["Vencedor"] != null)
+                {
+                    <p class="alert-success">@TempData["Vencedor"]</p>
+                }
+            }
+        </h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <input type="submit" class="btn btn-primary" value="Votar" />
+        </div>
+    </div>
+}
+
+<br>
+<div class="row">
+    <div class="col-md-4">
+        @{
+            var listaVotacao = TempData["ListaVotacao"] as List<RestaurantVotation.Domain.Model.VotingDTO> ?? new List<RestaurantVotation.Domain.Model.VotingDTO>();
+            if (listaVotacao.Any())
+            {
+                <h3>Votos</h3>
+                <table id="t01">
+                    <thead>
+                    <th>Colaborador</th>
+                    <th></th>
+                    <th>Restaurante</th>
+                    </thead>
+                    @foreach (var item in listaVotacao)
+                    {
+                        <tr>
+                            <td>
+                                @item.Staff.StaffName
+                            </td>
+                            <td>- - Votou em - -</td>
+                            <td>
+                                @item.Restaurant.RestaurantName
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            }
+        }
+    </div>
+
+    <div class="col-md-4">
+        @{
+            var parcial = TempData["Parcial"] as List<RestaurantVotation.Domain.Model.VotingDTO> ?? new List<RestaurantVotation.Domain.Model.VotingDTO>();
+            if (parcial.Any())
+            {
+                <h3>Parcial</h3>
+                <table id="t01">
+                    <thead>
+                    <th>Restaurante</th>
+                    <th></th>
+                    <th>Número de votos</th>
+                    </thead>
+                    @foreach (var item in parcial)
+                    {
+                        <tr>
+                            <td>
+                                @item.Restaurant.RestaurantName
+                            </td>
+                            <td>--------</td>
+                            <td>
+                                @item.NumberOfVotes
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            }
+        }
+    </div>
+</div>
